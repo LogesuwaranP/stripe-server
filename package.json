@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
   },
   "author": "",
   "license": "ISC",
@@ -15,8 +16,10 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.2",
     "mysql2": "^2.2.5",
+    "netlify-lambda": "^2.0.16",
     "nodemailer": "^6.9.1",
     "nodemon": "^2.0.7",
+    "serverless-http": "^3.2.0",
     "stripe": "^13.2.0"
   }
 }
